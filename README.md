@@ -43,13 +43,13 @@ Proyecto del curso **Seminario Complementario II (SENATI)**, desarrollado de for
 ## Organización del trabajo
 Cada integrante trabaja en ramas propias con el formato `feature/<nombre>-<funcionalidad>` y los cambios se integran a `main` mediante Pull Requests revisados por otro integrante.
 
-| Integrante | Ramas |
+| Integrante | ROLES |
 |---|---|
-| Gim Alvieri Ponce Rosas | `feature/gim-estructura`, `feature/gim-workflow` |
-| Pholsing Hugo Rubio Poma | `feature/pholsing-registro`, `feature/pholsing-validacion` |
-| Luis Angel Ursua Espiritu | `feature/luis-listado`, `feature/luis-contador` |
-| Jhosep Daniel Rubin Fonseca | `feature/jhosep-completar`, `feature/jhosep-filtros` |
-| Jerry Suñiga Masgo | `feature/jerry-eliminar`, `feature/jerry-estilos` |
+| Gim Alvieri Ponce Rosas |`Lider Tecnico`|
+| Pholsing Hugo Rubio Poma | `Desarrollador 1` |
+| Luis Angel Ursua Espiritu | `Desarrollador 2` |
+| Jhosep Daniel Rubin Fonseca | `Integrador/Revisor` |
+| Jerry Suñiga Masgo | `Calidad y Seguridad` |
 
 ## Estrategia de ramas
 - `main`: versión estable y funcional.
