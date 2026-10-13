@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Académicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <h1>Gestor de Tareas</h1>
+            <p>Organiza tus actividades académicas</p>
+        </header>
+
+        <section class="panel">
+            <h2>Registrar nueva tarea</h2>
+
+            <form id="formulario-tarea">
+                <div class="campo">
+                    <label for="titulo">Título de la tarea</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Ej. Investigar sobre economía"
+                        required
+                        maxlength="100"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="responsable">Responsable</label>
+                    <input
+                        type="text"
+                        id="responsable"
+                        placeholder="Nombre del responsable"
+                        required
+                        maxlength="60"
+                    >
+                </div>
+
+                <button type="submit" class="btn-agregar">
+                    + Agregar tarea
+                </button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="titulo-lista">
+                <h2>Lista de tareas</h2>
+                <span id="contador">0 tareas</span>
+            </div>
+
+            <div id="lista-tareas" class="lista-tareas">
+                <p class="vacio">Todavía no hay tareas registradas.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Gestor de Tareas Académicas | Proyecto colaborativo</p>
+        </footer>
+    </main>
+</body>
+</html>
