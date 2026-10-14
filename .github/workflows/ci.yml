@@ -1,0 +1,9 @@
+name: CI - Calidad y Seguridad
+
+on: push: branches: [ main, develop, feature/* ] pull_request: branches: [ main, develop ]
+
+jobs: verificacion-seguridad: name: Verificación de Seguridad y Credenciales runs-on: ubuntu-latest
+
+steps: - name: Descargar repositorio uses: actions/checkout@v4
+
+- name: Validar script de auditoría run: | echo "Comprobando script de auditoría de seguridad..." cat validar_seguridad.sh
