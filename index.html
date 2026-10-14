@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Académicas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Gestor de Tareas Académicas</h1>
+        <p>Organiza tus actividades académicas en un solo lugar.</p>
+    </header>
+
+    <main class="contenedor">
+        <section class="panel">
+            <h2>Registrar tarea</h2>
+            <form id="formulario-tarea">
+                <label for="titulo">Título de la tarea</label>
+                <input type="text" id="titulo"
+                       placeholder="Ej. Trabajo de programación" required>
+
+                <label for="responsable">Responsable</label>
+                <input type="text" id="responsable"
+                       placeholder="Nombre del estudiante" required>
+
+                <button type="submit">Agregar tarea</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Lista de tareas</h2>
+            <p id="contador">Total de tareas: 0</p>
+            <div id="lista-tareas">
+                <p>No hay tareas registradas.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto académico desarrollado con HTML, CSS y JavaScript.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.encabezado {
+    background: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.contenedor {
+    width: min(1000px, 92%);
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.panel {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 11px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.tarea {
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.completada {
+    background: #f0fdf4;
+    border-color: #86efac;
+}
+
+.completada h3 {
+    text-decoration: line-through;
+    color: #15803d;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.acciones button {
+    flex: 1;
+}
+
+.btn-eliminar {
+    background: #dc2626;
+}
+
+.btn-eliminar:hover {
+    background: #b91c1c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+@media (max-width: 700px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+}
