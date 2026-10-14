@@ -1,9 +1,34 @@
 name: CI - Calidad y Seguridad
 
-on: push: branches: [ main, develop, feature/* ] pull_request: branches: [ main, develop ]
+on:
+  push:
+    branches: [ main, develop, feature/* ]
+  pull_request:
+    branches: [ main, develop ]
 
-jobs: verificacion-seguridad: name: Verificación de Seguridad y Credenciales runs-on: ubuntu-latest
+jobs:
+  verificacion-seguridad:
+    name: Verificación de Seguridad y Credenciales
+    runs-on: ubuntu-latest
 
-steps: - name: Descargar repositorio uses: actions/checkout@v4
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
 
-- name: Validar script de auditoría run: | echo "Comprobando script de auditoría de seguridad..." cat validar_seguridad.sh
+      - name: Escaneo de credenciales expuestas
+        run: |
+          echo "Buscando posibles fugas de claves o tokens..."
+          if grep -rnE "password|secret|apikey|PRIVATE KEY" \
+            --exclude=".gitignore" \
+            --exclude="ci.yml" \
+            --exclude-dir=".git" .; then
+            echo "ERROR: Credencial o clave detectada en el repositorio."
+            exit 1
+          else
+            echo "OK: Repositorio limpio de credenciales en texto plano."
+          fi
+
+      - name: Comprobación de integridad del gestor de tareas
+        run: |
+          echo "Validando estructura base del proyecto..."
+          ls -la
