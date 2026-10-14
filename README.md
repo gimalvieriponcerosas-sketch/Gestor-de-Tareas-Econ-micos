@@ -49,7 +49,7 @@ Cada integrante trabaja en ramas propias con el formato `feature/<nombre>-<funci
 | Pholsing Hugo Rubio Poma | `Desarrollador 1` |
 | Luis Angel Ursua Espiritu | `Desarrollador 2` |
 | Jhosep Daniel Rubin Fonseca | `Integrador/Revisor` |
-| Jerry Suñiga Masgo | `Calidad y Seguridad` |
+| Jerry Israel Suñiga Masgo | `Calidad y Seguridad` |
 
 ## Estrategia de ramas
 - `main`: versión estable y funcional.
