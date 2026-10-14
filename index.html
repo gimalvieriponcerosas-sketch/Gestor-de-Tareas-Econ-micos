@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,31 +15,51 @@
 
     <main class="contenedor">
         <section class="panel">
-            <h2>Registrar tarea</h2>
+            <h2>Registrar nueva tarea</h2>
+
             <form id="formulario-tarea">
-                <label for="titulo">Título de la tarea</label>
-                <input type="text" id="titulo"
-                       placeholder="Ej. Trabajo de programación" required>
+                <div class="campo">
+                    <label for="titulo">Título de la tarea</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Ej. Investigar sobre economía"
+                        required
+                        maxlength="100"
+                    >
+                </div>
 
-                <label for="responsable">Responsable</label>
-                <input type="text" id="responsable"
-                       placeholder="Nombre del estudiante" required>
+                <div class="campo">
+                    <label for="responsable">Responsable</label>
+                    <input
+                        type="text"
+                        id="responsable"
+                        placeholder="Nombre del estudiante"
+                        required
+                        maxlength="60"
+                    >
+                </div>
 
-                <button type="submit">Agregar tarea</button>
+                <button type="submit" class="btn-agregar">
+                    + Agregar tarea
+                </button>
             </form>
         </section>
 
         <section class="panel">
-            <h2>Lista de tareas</h2>
-            <p id="contador">Total de tareas: 0</p>
-            <div id="lista-tareas">
-                <p>No hay tareas registradas.</p>
+            <div class="titulo-lista">
+                <h2>Lista de tareas</h2>
+                <span id="contador">Total de tareas: 0</span>
+            </div>
+
+            <div id="lista-tareas" class="lista-tareas">
+                <p class="vacio">No hay tareas registradas.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Proyecto académico desarrollado con HTML, CSS y JavaScript.</p>
+        <p>Gestor de Tareas Académicas | Proyecto colaborativo</p>
     </footer>
 </body>
 </html>
